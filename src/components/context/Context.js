@@ -9,14 +9,14 @@ const CartProvider = ({children}) =>{
     const [cartItems, setCartItems] = useState([]);
 
     const addToCart = (item,qty) => {
-        if (cartItems.some(product => product.titulo === item.titulo)) {
+        if (cartItems.some(product => product.id === item.id)) {
           const copy = [...cartItems];
           const repeteadIndex = cartItems.findIndex(
             product => product.titulo === item.titulo
           );
           copy[repeteadIndex] = {
             ...copy[repeteadIndex],
-            qty: copy[repeteadIndex].qty + qty
+            qty: /*copy[repeteadIndex].qty + */qty
           };
           setCartItems(copy);
         } else {
