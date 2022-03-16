@@ -1,12 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {useParams, Link} from 'react-router-dom';
-//el useParams es un HOOK que se usa para capturar la data que le pasamos
 
 function Categories(props){
 
     const [productosCategoria, setProductosCategoria] = useState([]);
 
-    //usar nombre exacto que se puso en el router
     const {categoriaID} = useParams;
 
    /* const getCategoria = async () => {
